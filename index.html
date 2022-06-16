@@ -30,17 +30,27 @@
                         </p>
                     </div>
                     <form>
-                        <!-- <img src="/images/icon-error.svg" alt="icon-error" class="fname-icon"> -->
-                        <i><img src="/images/icon-error.svg" alt="icon-error" class="fname-icon"></i>
                         <input type="text" name="" required placeholder="First Name">
+                        <span class="validation">
+                            First Name cannot be empty
+                        </span>
                         <input type="text" name="" required placeholder="Last Name">
-                        <input type="email" name="" required placeholder="Email Address">
+                        <span class="validation">
+                            Last Name cannot be empty
+                        </span>
+                        <input class="mail" type="email" name="" required placeholder="Email Address">
+                        <span class="validation">
+                            Email Address cannot be empty
+                        </span>
                         <input type="password" name="" required placeholder="Password">
+                        <span class="validation">
+                            Password cannot be empty
+                        </span>
                         <button type="submit">
                             CLAIM YOUR FREE TRIAL
                         </button>
                         <p>
-                            By clicking this button, you agreeing to our <span>Terms and Services</span>
+                            By clicking this button, you agreeing to our <span class="terms">Terms and Services</span>
                         </p>
                     </form>
                 </div>

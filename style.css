@@ -69,16 +69,24 @@ input {
     border: 1px solid #d1cfcf;
 }
  
-input:invalid {
-    border-color: hsl(0, 100%, 74%);
+input:required:invalid {
+    outline: 1px solid hsl(0, 100%, 74%);
+    background-image: url('/images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
 }
 
-/* input:valid {
-border-color: #d1cfcf;
 
-} */
+input:invalid+span {
+    display: inline;
+    text-align: right;
+    color: hsl(0, 100%, 74%);
+    font-size: 13px;
+    margin-bottom: 0.4rem;
+    font-style: italic;
 
-
+}
 
 button {
     background: hsl(154 59% 51%);
@@ -91,6 +99,7 @@ button {
     cursor: pointer;
 }
 
+
 form p {
     font-size: 13px;
     color: #c1c1c7;
@@ -98,8 +107,8 @@ form p {
     text-align: center;
 }
 
-form span {
-    color: rgb(230, 90, 90);
+.terms {
+    color: hsl(0, 100%, 74%);
 }
 
 .fname-icon {
