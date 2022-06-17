@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+/* using a mobile firt approach to make the website responsive,  the following code is used. The default view is mobile.  media query for desktop view is down below line-126 */
+
 body {
     background-image: url(/images/bg-intro-mobile.png);
+    background-size: cover;
     background-color: hsl(0, 100%, 74%);
     font-family: 'Poppins';
     font-size: 16px;
@@ -46,7 +49,7 @@ body {
 
 .trial-banner span {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 2rem;
 }
 
@@ -69,7 +72,7 @@ input {
     border: 1px solid #d1cfcf;
 }
  
-input:required:invalid {
+input:required:invalid:focus {
     outline: 1px solid hsl(0, 100%, 74%);
     background-image: url('/images/icon-error.svg');
     background-repeat: no-repeat;
@@ -77,8 +80,11 @@ input:required:invalid {
     background-origin: content-box;
 }
 
+.validation {
+    display: none;
+}
 
-input:invalid+span {
+input:focus:invalid+span {
     display: inline;
     text-align: right;
     color: hsl(0, 100%, 74%);
@@ -115,17 +121,20 @@ form p {
     position: relative;
 }
 
+/* media querry for  desktop view */
+
 @media screen and (min-width: 992px) { 
 
     body {
-        background-image: url(/images/bg-intro-desktop.png);
-        margin: 4rem 7rem;
+        background-image: url("/images/bg-intro-desktop.png");
+        background-size: cover;
+        margin: 4rem 5.5rem;
     }
 
     .main-container {
         display: grid;
         grid-template-columns: 1fr 55%;
-        /* justify-content: center; */
+        gap: 3.5rem;
     }
 
     .text-section {
@@ -138,6 +147,7 @@ form p {
 
     .text-section p {
         margin-top: 2rem;
+
     }
 
     form {
