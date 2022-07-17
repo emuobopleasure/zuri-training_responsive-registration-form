@@ -74,7 +74,7 @@ input {
  
 input:required:invalid:focus {
     outline: 1px solid hsl(0, 100%, 74%);
-    background-image: url('/images/icon-error.svg');
+    background-image: url('images/icon-error.svg');
     background-repeat: no-repeat;
     background-position: right;
     background-origin: content-box;
